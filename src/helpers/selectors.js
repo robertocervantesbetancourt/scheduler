@@ -19,13 +19,13 @@ export function getAppointmentsForDay(state, day) {
   for (let appointment of appointments) {
     appointmentList.push(state.appointments[appointment]);
   }
-  console.log(appointments);
+  //console.log(appointments);
   return appointmentList;
 }
 
- export function getInterview(state, interview) {
-  if(interview === null){
-    return null
+export function getInterview(state, interview) {
+  if (interview === null) {
+    return null;
   }
 
   let interviewObject = {};
@@ -35,4 +35,28 @@ export function getAppointmentsForDay(state, day) {
   return interviewObject;
 }
 
+export function getInterviewersForDay(state, day) {
+  let interviewersList = [];
+  let interviewers;
 
+  if (state.days.length === 0) {
+    return interviewersList;
+  }
+
+  
+  for (let d of state.days) {
+    if (d.name === day) {
+      interviewers = d.interviewers;
+    }
+  }
+  
+  if (!interviewers) {
+    return interviewersList;
+  }
+
+  for (let interviewer of interviewers) {
+    interviewersList.push(state.interviewers[interviewer]);
+  }
+
+  return interviewersList;
+}
