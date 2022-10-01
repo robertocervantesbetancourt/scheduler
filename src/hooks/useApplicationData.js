@@ -81,6 +81,39 @@ export default function useApplicationData() {
     });
   }
 
+  // useEffect(() => {
+  //   const exampleSocket = new WebSocket(
+  //     "ws://localhost:8001"
+  //     )
+  //     const msg = {
+  //       interview: {
+  //         student: "Roberto Cervantes",
+  //         Interviewer: {
+  //           id: 1,
+  //           name: "Sylvia Palmer",
+  //           avatar: "https://i.imgur.com/LpaY82x.png"
+  //         }
+  //       }
+  //     }
+
+
+  //     exampleSocket.onopen = (event) => {
+  //       exampleSocket.send(updateAppointment(1, msg));
+
+  //       exampleSocket.onmessage = (event) => {
+  //         const msg = JSON.parse(event.data)
+    
+  //         //const interview = msg.type["SET_INTERVIEW"]
+  //         console.log(msg)
+  //       }
+  //     };
+
+  //   exampleSocket.onmessage = (event) => {
+  //     console.log("Message received:", event.data);
+  //   }
+
+  // }, []);
+
   return {
     state,
     setDay,
