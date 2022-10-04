@@ -13,9 +13,6 @@ export default function Application(props) {
   const { state, setDay, bookInterview, cancelInterview } =
     useApplicationData();
 
-    // exampleSocket.onopen = (event) => {
-    //   exampleSocket.send("Here's some text that the server is urgently awaiting!");
-    // };
 
   let dailyAppointments = [];
   let dailyInterviewers = [];

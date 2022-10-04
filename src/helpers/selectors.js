@@ -23,16 +23,27 @@ export function getAppointmentsForDay(state, day) {
   return appointmentList;
 }
 
+// export function getInterview(state, interview) {
+//   if (interview === null) {
+//     return null;
+//   }
+
+//   let interviewObject = {};
+//   let interviewerID = interview.interviewer;
+//   interviewObject.student = interview.student;
+//   interviewObject.interviewer = state.interviewers[interviewerID];
+//   return interviewObject;
+// }
+
 export function getInterview(state, interview) {
-  if (interview === null) {
+  const output = {};
+  if (interview) {
+    output["student"] = interview.student;
+    output["interviewer"] = state.interviewers[interview.interviewer];
+  } else {
     return null;
   }
-
-  let interviewObject = {};
-  let interviewerID = interview.interviewer;
-  interviewObject.student = interview.student;
-  interviewObject.interviewer = state.interviewers[interviewerID];
-  return interviewObject;
+  return output;
 }
 
 export function getInterviewersForDay(state, day) {
@@ -60,3 +71,5 @@ export function getInterviewersForDay(state, day) {
 
   return interviewersList;
 }
+
+

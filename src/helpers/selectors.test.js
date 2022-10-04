@@ -32,9 +32,9 @@ const state = {
   },
   interviewers: {
     "1": {  
-      "id": 1,
-      "name": "Sylvia Palmer",
-      "avatar": "https://i.imgur.com/LpaY82x.png"
+      id: 1,
+      name: "Sylvia Palmer",
+      avatar: "https://i.imgur.com/LpaY82x.png"
     },
     "2": {
       id: 2,
@@ -91,7 +91,7 @@ test("getInterviewersForDay returns an empty array when the days data is empty",
   expect(result.length).toEqual(0);
 });
 
-test.only("getInterviewersForDay returns an empty array when the day is not found", () => {
+test("getInterviewersForDay returns an empty array when the day is not found", () => {
   const result = getInterviewersForDay(state, "Wednesday");
   expect(result.length).toEqual(0);
 });
