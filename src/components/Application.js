@@ -13,7 +13,6 @@ export default function Application(props) {
   const { state, setDay, bookInterview, cancelInterview } =
     useApplicationData();
 
-
   let dailyAppointments = [];
   let dailyInterviewers = [];
 
