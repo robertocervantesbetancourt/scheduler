@@ -25,7 +25,11 @@ npm test
 npm run storybook
 ```
 ## Screenshot
+Day with 0 appointments
 !["Day with 0 appointments"](https://github.com/robertocervantesbetancourt/scheduler/blob/master/docs/screen%201.png?raw=true)
+Day with 2 spots remaining
 !["Day with 2 spots remaining"](https://github.com/robertocervantesbetancourt/scheduler/blob/master/docs/screen%202.png?raw=true)
+Booking an appointment
 !["Booking an appointment"](https://github.com/robertocervantesbetancourt/scheduler/blob/master/docs/screen%204.png?raw=true)
+Deleting an appointment
 !["Deleting an appointment"](https://github.com/robertocervantesbetancourt/scheduler/blob/master/docs/screen%203.png?raw=true)
